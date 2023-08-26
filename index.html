@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DD</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body style="padding-top: 200px;">  <!--creating space between the content and the top edge of the body-->
+  <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#homesec" class="nav-link">home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#aboutsec" class="nav-link">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">creations</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div id="homesec" class="col-md-6 smt" style="padding-left:150px;">
+        <h2>hey there!</h2>
+        <p>It's DD here. I'm currently an undergraduate pursuing a B.Tech in Information Technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div id="aboutsec" class="col-md-6 smt" style="padding-right:150px; margin-left:auto">
+        <h2 style="padding-top: 100px">about me</h2>
+        <hr>
+        <p>An optimistic and curious individual, I thrive in collaborative group environments, 
+          working alongside others to achieve shared goals. With unwavering dedication, I consistently put forth my best effort to deliver high-quality results. 
+          Adaptable by nature, I embrace change and quickly adjust to new circumstances. 
+          Combining my creative thinking skills with a positive mindset, I approach challenges with 
+          enthusiasm, seeking opportunities for personal and professional growth. 
+          Passionate about Full Stack Development, I seek constant growth through learning and 
+          experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 smt" style="padding-left: 150px; margin-right: auto">
+            <h2 style="padding-top: 100px">skills</h2>
+            <hr>
+            <ul id="skills-list" style="font: weight 100px; font-size: 1.3rem;"></ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    const skills = ['Java', 'Python', 'Javascript', 'HTML & CSS', 'C'];
+
+    const skillsList = document.getElementById('skills-list');
+
+    skills.forEach(skill => {
+        const skillItem = document.createElement('li');
+        skillItem.textContent = skill;
+        skillsList.appendChild(skillItem);
+    });
+</script>
+
+
+
+  <section class="container-fluid con">
+    <div class="row">
+      <div id="contact" >
+        <h2 style="padding-top:200px; text-align: center; font-weight:100px; font-size: 3rem;">contact</h2>
+        <hr>
+        <div class="contact-link">
+          <a href="https://github.com/divyedarshiny" target="_blank" rel="noopener noreferrer" id="conlinks">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/divyedarshiny/" target="_blank" rel="noopener noreferrer" id="conlinks">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:www.divyedarshiny@gmail.com" target="_blank" rel="noopener noreferrer" id="conlinks">
+            <i class="bi bi-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+
+<script>
+  $(function() {
+    $(document).scroll(function(){
+      var $nav = $("#mainNavbar");
+      $nav.toggleClass("scrolled",$(this).scrollTop() > $nav.height());
+    });
+  });
+</script>
+</body>
+</html>
