@@ -1,5 +1,5 @@
 body{
-    background: #fed053;
+    background: #f5d9d5;
     font-family: "Nunito",sans-serif;
 }
 
@@ -9,15 +9,15 @@ body{
 }
 
 #mainNavbar .nav-link{
-    color: #f5b301;
+    color: white;
 }
 
 #mainNavbar .nav-link:hover {
-    color : #3b3f46
+    color :  #EA1C2C;
 }
 
 .scrolled {
-    background : #3b3f46;
+    background : rgb(222,192,222);
 
 }
 
