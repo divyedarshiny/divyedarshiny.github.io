@@ -8,6 +8,13 @@ $(document).ready(function() {
       skillItem.textContent = skill;
       skillsList.appendChild(skillItem);
   });
+
+  projects.forEach(project => {
+    const projectItem = document.createElement('li');
+    projectItem.textContent = project;
+    projectsList.appendChild(projectItem);
+});
+
   
   $(document).scroll(function(){
       var $nav = $("#mainNavbar");
