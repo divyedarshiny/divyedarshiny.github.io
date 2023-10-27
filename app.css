@@ -74,3 +74,24 @@ body{
     border-bottom: 6px solid transparent;
     border-left: 10px solid black; /* Adjust color as needed */
 }
+
+#projects-list li {
+    list-style: none;
+    position: relative;
+    padding-right: 20px; /* Adjust padding as needed */
+    margin-bottom: 10px;
+    text-align: right; /* Align the text to the right */
+}
+
+#projects-list li:before {
+    content: "";
+    position: absolute;
+    right: -10px; /* Adjust position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid black; /* Adjust color as needed */
+}
